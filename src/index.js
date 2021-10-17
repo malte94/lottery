@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+/* ___________________ Components ___________________ */
+import Ball from './Ball';
+import Lottery from './Lottery';
+/* __________________________________________________ */
+
+/* _____________________ Styles _____________________ */
+import './App.css'
+/* __________________________________________________ */
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <div className="App">
+    <Lottery />
+    <Lottery title="Mini Daily" maxNum={10} numBalls={4} />
+  </div>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
